@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '@fontsource/poppins';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Accordion from './components/accordion/accordion'
 
