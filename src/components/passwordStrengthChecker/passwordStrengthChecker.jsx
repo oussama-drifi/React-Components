@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './passwordStrengthChecker.css';
-import { useEffect } from 'react';
 
 const PasswordStrengthChecker = () => {
 
