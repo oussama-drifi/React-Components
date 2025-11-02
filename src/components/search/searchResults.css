@@ -1,0 +1,68 @@
+.options{
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    padding: 5px;
+    box-shadow: 1px 1px 40px rgba(51, 0, 90, 0.075);
+    border: 1px solid #eee;
+    border-radius: 7px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(calc(100% + 4px));
+    overflow: auto;
+    & ul{
+        max-height: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        & li{
+            border-radius: 5px;
+            padding: 10px;
+            background-color: transparent;
+            transition-duration: 0.35s;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        & li:hover{
+            background-color: #eeeeef68;
+        }
+    }
+    & .loader {
+        background-color: white;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        border-radius: 8px;
+        & i{
+            animation-name: load;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform-origin: center center;
+            animation-direction:reverse;
+            font-size: 22px;
+            opacity: 0.6;
+            color: rgb(91, 9, 255);
+        }
+    }
+}
+
+
+@keyframes load {
+    to {
+        transform: rotate(365deg);
+    }
+}
+::-webkit-scrollbar{
+    width: 2px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(233, 232, 235);
+    border-radius: 80px;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+    padding: 3px;
+}
