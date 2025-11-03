@@ -10,12 +10,7 @@ const SearchResults = ({optionsShown, searchQuery}) => {
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
     ]); // more countries...
 
-    // let filteredCountries;
-
-    // useEffect(() => {
-    //     // console.log("saerch query is ",searchQuery);
-    //     filteredCountries = countries.filter(country => country.toLowerCase().startsWith(searchQuery.toLowerCase()));
-    // }, [searchQuery]);
+    let timeout;
 
     return (
         <>

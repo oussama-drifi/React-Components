@@ -1,17 +1,29 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './searchBar.css'
 
-const SearchBar = ({optionsShown, setOptionsShown, searchQuery, setSearchQuery}) => {
+const SearchBar = ({setOptionsShown, searchQuery, setSearchQuery}) => {
+
+    const [input, setInpt] = useState("");
+
+    const timerRef = useRef(null);
 
     const handleChange = (e) => {
         const query = e.target.value;
-        setOptionsShown(query.trim());
-        setSearchQuery(query);
+        setOptionsShown(query.trim().length > 0);
+        setInpt(query);
+        clearTimeout(timerRef.current);
+
+        timerRef.current = setTimeout(() => {
+            setSearchQuery(query);
+            console.log("search done!");
+        }, 300);
     }
 
     const clearInput = () => {
         setSearchQuery("");
+        setInpt("");
         setOptionsShown(false);
+        clearTimeout(timerRef.current);
     }
 
     return (
@@ -22,7 +34,7 @@ const SearchBar = ({optionsShown, setOptionsShown, searchQuery, setSearchQuery})
                 id='search-item'
                 type="text" 
                 placeholder="Search" 
-                value={searchQuery} 
+                value={input}
                 onChange={handleChange} 
             />
             {/* conditionnaly render the clear button */}
