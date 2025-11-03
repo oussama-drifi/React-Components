@@ -29,7 +29,7 @@ const SearchBar = ({setOptionsShown, searchQuery, setSearchQuery}) => {
     return (
         <div className="search-input">
             <button type='button'><i className="bi bi-search"></i></button>
-            <label htmlFor="search-item"></label>
+            {/* <label htmlFor="search-item"></label> */}
             <input 
                 id='search-item'
                 type="text" 
