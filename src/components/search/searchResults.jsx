@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SearchItem from './searchItem';
-import './searchResults.css'
+import './searchResults.css';
 
-const SearchResults = ({optionsShown, setOptionsShown, searchQuery, setSearchQuery}) => {
+const SearchResults = ({optionsShown, searchQuery}) => {
 
     // searchQuery is a state that is coming from the parent component
 
@@ -10,11 +10,12 @@ const SearchResults = ({optionsShown, setOptionsShown, searchQuery, setSearchQue
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
     ]); // more countries...
 
-    const filteredCountries = countries.filter(country => {
-        return country.startsWith(searchQuery)
-    })
+    // let filteredCountries;
 
-    console.log(searchQuery)
+    // useEffect(() => {
+    //     // console.log("saerch query is ",searchQuery);
+    //     filteredCountries = countries.filter(country => country.toLowerCase().startsWith(searchQuery.toLowerCase()));
+    // }, [searchQuery]);
 
     return (
         <>
@@ -24,7 +25,7 @@ const SearchResults = ({optionsShown, setOptionsShown, searchQuery, setSearchQue
                         {/* <div className="loader"><i className="bi bi-arrow-repeat"></i></div> */}
                         <div className="results">
                             {
-                                filteredCountries.map((country) => <SearchItem key={country} name={country}/>)
+                                countries.filter(country => country.toLowerCase().startsWith(searchQuery.toLowerCase())).map((country) => <SearchItem key={country} name={country}/>)
                             }
                         </div>
                     </div>
