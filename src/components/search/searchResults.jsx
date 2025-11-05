@@ -1,14 +1,9 @@
 import { useEffect, useState } from 'react';
 import {SearchItem, searchItemSkeleton } from './searchItem';
+import { countries } from './countries'
 import './searchResults.css';
 
 const SearchResults = ({optionsShown, searchQuery}) => {
-
-    // searchQuery is a state that is coming from the parent component
-
-    const [countries, setCountries] = useState([
-    "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
-    ]); // more countries...
 
     return (
         <>
