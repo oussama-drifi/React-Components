@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import SearchItem from './searchItem';
+import {SearchItem, searchItemSkeleton } from './searchItem';
 import './searchResults.css';
 
 const SearchResults = ({optionsShown, searchQuery}) => {
@@ -9,8 +9,6 @@ const SearchResults = ({optionsShown, searchQuery}) => {
     const [countries, setCountries] = useState([
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
     ]); // more countries...
-
-    let timeout;
 
     return (
         <>

@@ -16,5 +16,11 @@
     }
 }
 .search-item-skeleton {
-    
+    padding: 6px;
+    div {
+        width: 100%;
+        background-color: #eee;
+        border-radius: 70px;
+        height: 8px;
+    }
 }

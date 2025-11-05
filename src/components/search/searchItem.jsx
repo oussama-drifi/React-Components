@@ -21,4 +21,4 @@ const SearchItem = ({name}) => {
     )
 }
 
-export default SearchItem
+export {SearchItem, searchItemSkeleton}
