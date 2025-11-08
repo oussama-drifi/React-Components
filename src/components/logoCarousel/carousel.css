@@ -1,0 +1,85 @@
+.my-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    display: inline-flex;
+
+    .left-blur, .right-blur {
+        position: absolute;
+        width: 100px;
+        height: 200%;
+        top: -50%;
+        background-color: #0c0c0c;
+        filter: blur(20px);
+        z-index: 10;
+    }
+    .left-blur {
+        left: 0;
+        transform: translateX(-30%);
+    }
+    .right-blur {
+        right: 0;
+        transform: translateX(30%);
+    }
+
+
+    .carousel-container {
+        overflow: hidden;
+        /* position: relative; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 200%;
+
+        animation-name: carousel-animation;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+
+        transform: translateX(0%);
+
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        .logo-wrapper {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(33, 33, 33, 0.361);
+            color: rgb(168, 168, 168);
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            border:  1px solid transparent;
+            cursor: pointer;
+            flex-shrink: 0;
+        
+            .logo i {
+                font-size: 40px;
+            }
+
+
+            &:hover {
+                border:  1px solid #a0a0a0;
+                color: rgb(222, 222, 222);
+            }
+        }
+    }
+}
+
+@keyframes carousel-animation {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-50%);
+    }
+}
