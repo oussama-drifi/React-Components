@@ -4,9 +4,7 @@ import SearchResults from './searchResults'
 
 const Search = () => {
 
-    const styles = {
-        position: "relative"
-    }
+    const styles = { position: "relative" }
     
     const [searchQuery, setSearchQuery] = useState("");
     const [optionsShown, setOptionsShown] = useState(false);

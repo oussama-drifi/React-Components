@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import {SearchItem, searchItemSkeleton } from './searchItem';
 import { countries } from './countries'
 import './searchResults.css';

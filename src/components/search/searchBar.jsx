@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import './searchBar.css'
 
 const SearchBar = ({input, setInput, setOptionsShown, searchQuery, setSearchQuery}) => {
@@ -7,13 +7,12 @@ const SearchBar = ({input, setInput, setOptionsShown, searchQuery, setSearchQuer
 
     const handleChange = (e) => {
         const query = e.target.value;
+        setInput(query);  
         setOptionsShown(query.trim().length > 0);
-        setInput(query);
+        // debouncing logic
         clearTimeout(timerRef.current);
-
         timerRef.current = setTimeout(() => {
             setSearchQuery(query);
-            console.log("search done!");
         }, 300);
     }
 
