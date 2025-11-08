@@ -11,9 +11,9 @@ const searchItemSkeleton = () => {
 
 
 
-const SearchItem = ({name}) => {
+const SearchItem = ({name, onclick}) => {
     return (
-        <div className="search-item">
+        <div className="search-item" onClick={onclick}>
             <div className="country-name">
                 <span>{name}</span>
             </div>

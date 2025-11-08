@@ -10,6 +10,7 @@
     bottom: 0;
     transform: translateY(calc(100% + 4px));
     overflow: auto;
+    max-height: 250px;
     & ul{
         max-height: 200px;
         display: flex;

@@ -1,9 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 import {SearchItem, searchItemSkeleton } from './searchItem';
 import { countries } from './countries'
 import './searchResults.css';
 
-const SearchResults = ({optionsShown, searchQuery}) => {
+const SearchResults = ({input, setInput, optionsShown, setOptionsShown, searchQuery, setSearchQuery}) => {
+
+    const filteredCountries = useMemo(() => {
+        return countries.filter(country => country.toLowerCase().startsWith(searchQuery.toLowerCase()))
+    }, [searchQuery])
+
+    const handleSelect = (country) => {
+        setInput(country);
+        setOptionsShown(false);
+    }
 
     return (
         <>
@@ -13,7 +22,7 @@ const SearchResults = ({optionsShown, searchQuery}) => {
                         {/* <div className="loader"><i className="bi bi-arrow-repeat"></i></div> */}
                         <div className="results">
                             {
-                                countries.filter(country => country.toLowerCase().startsWith(searchQuery.toLowerCase())).map((country) => <SearchItem key={country} name={country}/>)
+                                filteredCountries.map((country) => <SearchItem key={country} name={country} onclick={() => handleSelect(country)}/>)
                             }
                         </div>
                     </div>

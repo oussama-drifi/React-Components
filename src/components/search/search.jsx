@@ -3,17 +3,19 @@ import SearchBar from "./searchBar";
 import SearchResults from './searchResults'
 
 const Search = () => {
+
     const styles = {
         position: "relative"
     }
     
     const [searchQuery, setSearchQuery] = useState("");
     const [optionsShown, setOptionsShown] = useState(false);
+    const [input, setInput] = useState("");
 
     return (
         <main style={styles}>
-            <SearchBar optionsShown={optionsShown} setOptionsShown={setOptionsShown} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-            <SearchResults optionsShown={optionsShown} setOptionsShown={setOptionsShown} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            <SearchBar input={input} setInput={setInput} optionsShown={optionsShown} setOptionsShown={setOptionsShown} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            <SearchResults input={input} setInput={setInput} optionsShown={optionsShown} setOptionsShown={setOptionsShown} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         </main>
     )
 }

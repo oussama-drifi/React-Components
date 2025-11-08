@@ -1,16 +1,14 @@
 import { useRef, useState } from 'react'
 import './searchBar.css'
 
-const SearchBar = ({setOptionsShown, searchQuery, setSearchQuery}) => {
-
-    const [input, setInpt] = useState("");
+const SearchBar = ({input, setInput, setOptionsShown, searchQuery, setSearchQuery}) => {
 
     const timerRef = useRef(null);
 
     const handleChange = (e) => {
         const query = e.target.value;
         setOptionsShown(query.trim().length > 0);
-        setInpt(query);
+        setInput(query);
         clearTimeout(timerRef.current);
 
         timerRef.current = setTimeout(() => {
@@ -21,7 +19,7 @@ const SearchBar = ({setOptionsShown, searchQuery, setSearchQuery}) => {
 
     const clearInput = () => {
         setSearchQuery("");
-        setInpt("");
+        setInput("");
         setOptionsShown(false);
         clearTimeout(timerRef.current);
     }
@@ -29,13 +27,13 @@ const SearchBar = ({setOptionsShown, searchQuery, setSearchQuery}) => {
     return (
         <div className="search-input">
             <button type='button'><i className="bi bi-search"></i></button>
-            {/* <label htmlFor="search-item"></label> */}
+            <label htmlFor="search-item"></label>
             <input 
                 id='search-item'
                 type="text" 
                 placeholder="Search" 
                 value={input}
-                onChange={handleChange} 
+                onChange={handleChange}
             />
             {/* conditionnaly render the clear button */}
             {
