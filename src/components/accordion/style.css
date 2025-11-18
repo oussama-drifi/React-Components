@@ -8,6 +8,7 @@ body{
     flex-direction: column;
 
     .question-container{
+        text-align: start;
         border-bottom: 1.5px solid #b4b4b4;
         overflow: hidden;
         color: #b4b4b4;

@@ -26,8 +26,8 @@ function App() {
         <>
             {/* <Accordion questions={questions}/>
             <PasswordStrengthChecker />
-            <Search /> */}
-            <Carousel />
+            <Search />
+            <Carousel /> */}
         </>
     )
 }
