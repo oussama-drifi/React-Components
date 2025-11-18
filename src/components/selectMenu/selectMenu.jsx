@@ -1,3 +1,5 @@
+import './selectMenu.css'
+
 const SelectMenu = ({options}) => {
     return (
         <div className="select-wrapper">

@@ -51,16 +51,22 @@
             padding: 7px 7px;
             font-weight: 400;
             font-size: 14px;
+            text-align: start;
+            &:hover {
+                /* background-color: rgb(252, 248, 255); */
+                /* background-color: #e8e8e867; */
+                background-color: red;
+            }
         }
         li:hover{
             background-color: rgb(252, 248, 255);
             background-color: #e8e8e867;
         }
     }
-    .show-options{
+    /* .show-options{
         opacity: 1;
         transform: translateY(calc(100% + 1.5px)) scale(1);
         pointer-events: auto;
         transition-duration: 0.35s;
-    }
+    } */
 }
