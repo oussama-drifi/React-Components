@@ -5,7 +5,7 @@ import Accordion from './components/accordion/accordion'
 import PasswordStrengthChecker from './components/passwordStrengthChecker/passwordStrengthChecker'
 import Search from './components/search/search'
 import Carousel from './components/logoCarousel/carousel';
-
+import SelectMenu from './components/selectMenu/selectMenu';
 
 function App() {
 
@@ -22,12 +22,15 @@ function App() {
         }
     ]
 
+    const options = ["Casablanca-Settat", "Rabat-Salé", "Tanger-Tétouan", "Laayoune-Boujdour", "Sous-Massa"];
+
     return (
         <>
             {/* <Accordion questions={questions}/>
             <PasswordStrengthChecker />
             <Search />
             <Carousel /> */}
+            <SelectMenu options={options}/>
         </>
     )
 }
