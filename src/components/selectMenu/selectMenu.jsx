@@ -24,22 +24,15 @@ const SelectMenu = ({options}) => {
         return;
         }
 
+
         if (e.key === "Escape") setIsShown(false);
 
-        if (e.key === "ArrowDown") {
         e.preventDefault();
-        setFocusedIndex(i => Math.min(i + 1, options.length - 1));
-        }
+        if (e.key === "ArrowDown") setFocusedIndex(i => Math.min(i + 1, options.length - 1));
 
-        if (e.key === "ArrowUp") {
-        e.preventDefault();
-        setFocusedIndex(i => Math.max(i - 1, 0));
-        }
+        if (e.key === "ArrowUp") setFocusedIndex(i => Math.max(i - 1, 0));
 
-        if (e.key === "Enter") {
-            e.preventDefault();
-            setSelectedOption(options[focusedIndex]);
-        }
+        if (e.key === "Enter") setSelectedOption(options[focusedIndex]);
     };
 
     // DOM elements
