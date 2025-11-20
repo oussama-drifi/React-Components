@@ -46,12 +46,11 @@ const SelectMenu = ({options}) => {
     const wrapperRef = useRef(null);
     const buttonRef = useRef(null);
     const optionsRef = useRef(null);
-    const selectedOptionRef = useRef(null);
     
     // attach event to document in case of out-ou-menu click
     useEffect(() => {
         const closeMenuOnOuterClick = (e) => {
-            if(!selectedOptionRef.current.contains(e.target)){
+            if(buttonRef.current && !buttonRef.current.contains(e.target)){
                 setIsShown(false);
             }
         }
@@ -63,7 +62,7 @@ const SelectMenu = ({options}) => {
 
     useEffect(() => {
         if (isShown && focusedIndex >= 0) {
-        const el = listRef.current?.children[focusedIndex];
+        const el = optionsRef.current?.children[focusedIndex];
         el?.focus();
         }
     }, [focusedIndex, isShown]);
@@ -106,7 +105,7 @@ const SelectMenu = ({options}) => {
                             id={`option-${index}`}
                             role="option"
                             tabIndex={-1}
-                            aria-selected={selected === option}
+                            aria-selected={selectedOption === option}
                             onMouseEnter={() => setFocusedIndex(index)}
                         >{option}</li>
                     ))
