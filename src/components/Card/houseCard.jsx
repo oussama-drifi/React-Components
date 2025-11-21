@@ -7,7 +7,7 @@ const HouseCard = ({srcImage, city, isAvailable, title, description, price}) => 
                 </div>
                 <div className="card-badge">
                     <div className="city"><i className="bi bi-geo-fill"></i> {city}</div>
-                    <div className={`availability ${color}`}><i className="bi bi-circle-fill"></i> {isAvailable ? "Available" : "Occupied"}</div>
+                    <div className={`availability ${isAvailable ? "green" : "orange"}`}><i className="bi bi-circle-fill"></i> {isAvailable ? "Available" : "Occupied"}</div>
                 </div>
             </div>
             <div className="card-content">
