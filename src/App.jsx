@@ -6,6 +6,7 @@ import PasswordStrengthChecker from './components/passwordStrengthChecker/passwo
 import Search from './components/search/search'
 import Carousel from './components/logoCarousel/carousel';
 import SelectMenu from './components/selectMenu/selectMenu';
+import HouseCard from './components/Card/houseCard'
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
             <PasswordStrengthChecker />
             <Search />
             <Carousel /> */}
-            <SelectMenu options={options}/>
+            {/* <SelectMenu options={options}/> */}
         </>
     )
 }
