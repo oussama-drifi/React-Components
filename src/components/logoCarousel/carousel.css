@@ -1,85 +1,112 @@
-.my-wrapper {
+/* .my-wrapper {
     overflow: hidden;
     width: 100%;
     position: relative;
     margin: 0 auto;
-    display: inline-flex;
+    display: inline-flex; */
+/* 
+} */
 
-    .left-blur, .right-blur {
-        position: absolute;
-        width: 100px;
-        height: 200%;
-        top: -50%;
-        background-color: #0c0c0c;
-        filter: blur(20px);
-        z-index: 10;
+.carousel-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem 0;
+    overflow: hidden; /* Critical for masking the overflow */
+}
+
+/* The Gradient Masks (The fade effect on sides) */
+.carousel-wrapper::before,
+.carousel-wrapper::after {
+    content: "";
+    position: absolute;
+    background-color: #0c0c0c;
+    filter: blur(20px);
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none; /* Let clicks pass through */
+
+}
+.carousel-wrapper::before {
+    left: 0;
+    transform: translateX(-50%);
+}
+.carousel-wrapper::after {
+    right: 0;
+    transform: translateX(50%);
+}
+
+
+/* The Track */
+.carousel-track {
+    display: flex;
+    align-items: center;
+    /* Calculate width: 
+        If we have 12 items * 150px (item width) = 1800px per set.
+        Two sets = 3600px.
+        However, allowing it to flow naturally with flex is usually safer.
+    */
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+/* Pause animation on hover for better UX */
+.carousel-wrapper:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+/* Individual Logo Card */
+.logo-item {
+    width: 100px;
+    height: 100px;
+    padding: 0 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: rgba(33, 33, 33, 0.361);
+    color: rgba(168, 168, 168, 0.676);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 7px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.logo-item i {
+    font-size: 40px;
+}
+.logo-item span {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+.logo-item:hover {
+    color: rgb(222, 222, 222);
+}
+
+/* The Keyframe Animation */
+@keyframes scroll {
+    0% {
+    transform: translateX(0);
     }
-    .left-blur {
-        left: 0;
-        transform: translateX(-30%);
-    }
-    .right-blur {
-        right: 0;
-        transform: translateX(30%);
-    }
-
-
-    .carousel-container {
-        overflow: hidden;
-        /* position: relative; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        width: 200%;
-
-        animation-name: carousel-animation;
-        animation-duration: 20s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-
-
-        transform: translateX(0%);
-
-
-        &:hover {
-            animation-play-state: paused;
-        }
-
-        .logo-wrapper {
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-            width: 100px;
-            height: 100px;
-            background-color: rgba(33, 33, 33, 0.361);
-            color: rgb(168, 168, 168);
-            border-radius: 7px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s ease;
-            border:  1px solid transparent;
-            cursor: pointer;
-            flex-shrink: 0;
-        
-            .logo i {
-                font-size: 40px;
-            }
-
-
-            &:hover {
-                border:  1px solid #a0a0a0;
-                color: rgb(222, 222, 222);
-            }
-        }
+    100% {
+    /* Move left by exactly 50% of the track's width */
+    transform: translateX(-50%);
     }
 }
 
-@keyframes carousel-animation {
-    from {
-        transform: translateX(0);
-    } to {
-        transform: translateX(-50%);
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .carousel-wrapper::before,
+    .carousel-wrapper::after {
+    width: 50px;
+    }
+    .logo-item {
+    width: 100px;
+    padding: 0 1rem;
     }
 }

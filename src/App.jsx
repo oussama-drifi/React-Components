@@ -27,10 +27,10 @@ function App() {
 
     return (
         <>
-            {/* <Accordion questions={questions}/>
-            <PasswordStrengthChecker />
-            <Search />
-            <Carousel /> */}
+            {/* <Accordion questions={questions}/> */}
+            {/* <PasswordStrengthChecker /> */}
+            {/* <Search /> */}
+            <Carousel />
             {/* <SelectMenu options={options}/> */}
         </>
     )

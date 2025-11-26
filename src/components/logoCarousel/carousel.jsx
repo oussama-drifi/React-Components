@@ -2,157 +2,66 @@ import './carousel.css'
 
 export default function Carousel () {
 
+    const LOGOS = [
+        {
+            icon: "bi bi-android2",
+            title: "android"
+        },
+        {
+            icon: "bi bi-google-play",
+            title: "play"
+        },
+        {
+            icon: "bi bi-youtube",
+            title: "youtube"
+        },
+        {
+            icon: "bi bi-browser-chrome",
+            title: "chrome"
+        },
+        {
+            icon: "bi bi-apple",
+            title: "apple"
+        },
+        {
+            icon: "bi bi-browser-safari",
+            title: "safari"
+        },
+        {
+            icon: "bi bi-whatsapp",
+            title: "whatsapp"
+        },
+        {
+            icon: "bi bi-apple-music",
+            title: "music"
+        },
+        {
+            icon: "bi bi-envelope-paper",
+            title: "email"
+        },
+    ]
 
     return (
-        <div className="my-wrapper">
-            <div className="left-blur"></div>
-            <div className="right-blur"></div>
-
-            <div className="carousel-container">
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-android2"></i>
-                    </div>
-                    <span className="caption">
-                        android
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-google-play"></i>
-                    </div>
-                    <span className="caption">
-                        play
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-youtube"></i>
-                    </div>
-                    <span className="caption">
-                        youtube
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-browser-chrome"></i>
-                    </div>
-                    <span className="caption">
-                        chrome
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-apple"></i>
-                    </div>
-                    <span className="caption">
-                        apple
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-browser-safari"></i>
-                    </div>
-                    <span className="caption">
-                        safari
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-whatsapp"></i>
-                    </div>
-                    <span className="caption">
-                        whatsapp
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-apple-music"></i>
-                    </div>
-                    <span className="caption">
-                        music
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-envelope-paper"></i>
-                    </div>
-                    <span className="caption">
-                        email
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-android2"></i>
-                    </div>
-                    <span className="caption">
-                        android
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-google-play"></i>
-                    </div>
-                    <span className="caption">
-                        play
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-youtube"></i>
-                    </div>
-                    <span className="caption">
-                        youtube
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-browser-chrome"></i>
-                    </div>
-                    <span className="caption">
-                        chrome
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-apple"></i>
-                    </div>
-                    <span className="caption">
-                        apple
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-browser-safari"></i>
-                    </div>
-                    <span className="caption">
-                        safari
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-whatsapp"></i>
-                    </div>
-                    <span className="caption">
-                        whatsapp
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-apple-music"></i>
-                    </div>
-                    <span className="caption">
-                        music
-                    </span>
-                </div>
-                <div className="logo-wrapper">
-                    <div className="logo">
-                        <i className="bi bi-envelope-paper"></i>
-                    </div>
-                    <span className="caption">
-                        email
-                    </span>
-                </div>
+        <div className="carousel-wrapper">
+            <div className="carousel-track">
+                {/* first set */}
+                {
+                    LOGOS.map((logo, index) => (
+                        <div key={`original-${index}`} className="logo-item">
+                            <i className={logo.icon}></i>
+                            <span>{logo.title}</span>
+                        </div>
+                    ))
+                }
+                {/* second set */}
+                {
+                    LOGOS.map((logo, index) => (
+                        <div key={`original-${index}`} className="logo-item">
+                            <i className={logo.icon}></i>
+                            <span>{logo.title}</span>
+                        </div>
+                    ))
+                }
             </div>
         </div>
     )
