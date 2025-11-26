@@ -2,11 +2,11 @@ import '@fontsource/poppins';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Accordion from './components/accordion/accordion'
-import PasswordStrengthChecker from './components/passwordStrengthChecker/passwordStrengthChecker'
-import Search from './components/search/search'
-import Carousel from './components/logoCarousel/carousel';
-import SelectMenu from './components/selectMenu/selectMenu';
-import HouseCard from './components/Card/houseCard'
+// import PasswordStrengthChecker from './components/passwordStrengthChecker/passwordStrengthChecker'
+// import Search from './components/search/search'
+// import Carousel from './components/logoCarousel/carousel';
+// import SelectMenu from './components/selectMenu/selectMenu';
+// import HouseCard from './components/Card/houseCard'
 
 function App() {
 
@@ -27,10 +27,10 @@ function App() {
 
     return (
         <>
-            {/* <Accordion questions={questions}/> */}
+            <Accordion questions={questions}/>
             {/* <PasswordStrengthChecker /> */}
             {/* <Search /> */}
-            <Carousel />
+            {/* <Carousel /> */}
             {/* <SelectMenu options={options}/> */}
         </>
     )
