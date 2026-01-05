@@ -26,14 +26,8 @@ const PasswordStrengthChecker = () => {
         });
     }
     // set the progrees class
-    const progresses = {
-        0: "",
-        1: "one",
-        2: "two",
-        3: "three",
-        4: "four",
-        5: "five"
-    }
+    const progresses = { 0: "", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five" }
+    
     let progress = progresses[Object.values(constraints).filter(val => val).length];
     
     return (
