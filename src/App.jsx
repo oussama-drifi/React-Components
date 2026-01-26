@@ -2,14 +2,15 @@ import '@fontsource/poppins';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Accordion from './components/accordion/accordion'
-// import PasswordStrengthChecker from './components/passwordStrengthChecker/passwordStrengthChecker'
-// import Search from './components/search/search'
+import PasswordStrengthChecker from './components/passwordStrengthChecker/passwordStrengthChecker'
+import Search from './components/search/search'
 // import Carousel from './components/logoCarousel/carousel';
-// import SelectMenu from './components/selectMenu/selectMenu';
-// import HouseCard from './components/Card/houseCard'
+import SelectMenu from './components/selectMenu/selectMenu';
+import HouseCard from './components/Card/houseCard'
 
 function App() {
 
+    // for testing accordion component
     const questions = [
         {
         question: "are you working on a some project ?",
@@ -22,17 +23,18 @@ function App() {
         answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi fugiat quos odio, eveniet nostrum harum illo, mollitia blanditiis dolores possimus magnam minus necessitatibus. Rerum et quia corporis nemo alias corrupti."
         }
     ]
-
+    // for testing selection menu component
     const options = ["Casablanca-Settat", "Rabat-Salé", "Tanger-Tétouan", "Laayoune-Boujdour", "Sous-Massa"];
 
     return (
-        <>
-            <Accordion questions={questions}/>
-            {/* <PasswordStrengthChecker /> */}
+        <div>
+            {/* <Accordion questions={questions}/> */}
+            <PasswordStrengthChecker />
             {/* <Search /> */}
             {/* <Carousel /> */}
             {/* <SelectMenu options={options}/> */}
-        </>
+            <HouseCard />
+        </div>
     )
 }
 
