@@ -3,7 +3,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Accordion from './components/accordion/accordion'
 import PasswordStrengthChecker from './components/passwordStrengthChecker/passwordStrengthChecker'
-// import Search from './components/search/search'
+import Search from './components/search/search'
 // import Carousel from './components/logoCarousel/carousel';
 import SelectMenu from './components/selectMenu/selectMenu';
 // import HouseCard from './components/Card/houseCard'
@@ -30,7 +30,7 @@ function App() {
         <div>
             <Accordion questions={questions}/>
             <PasswordStrengthChecker />
-            {/* <Search /> */}
+            <Search />
             {/* <Carousel /> */}
             <SelectMenu options={options}/>
             {/* <HouseCard /> */}

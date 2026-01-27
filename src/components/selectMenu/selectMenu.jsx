@@ -2,12 +2,14 @@ import { useEffect, useRef, useState } from 'react'
 import './selectMenu.css'
 
 const SelectMenu = ({options}) => {
+    const [isOptionSelected, setIsOptionSelected] = useState(false)
     const [isShown, setIsShown] = useState(false);
-    const [selectedOption, setSelectedOption] = useState(options[0]); // throws error in case of empty options array
+    const [selectedOption, setSelectedOption] = useState("select option"); // throws error in case of empty options array
     const [focusedIndex, setFocusedIndex] = useState(-1);
 
     // toggle options menu
     const handleChange = (option) => {
+        setIsOptionSelected(true)
         setSelectedOption(option);
         setIsShown(prev => !prev);
         buttonRef.current?.focus();
@@ -61,7 +63,7 @@ const SelectMenu = ({options}) => {
     }, [focusedIndex, isShown]);
 
     return (
-        <div className="select-wrapper" ref={wrapperRef}>
+        <div className={`select-wrapper ${isOptionSelected ? "selected" : ""}`} ref={wrapperRef}>
             <input 
                 type="hidden" 
                 value={selectedOption}
