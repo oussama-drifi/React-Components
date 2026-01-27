@@ -3,7 +3,7 @@ import './style.css'
 const Accordion = ({questions}) => {
 
     return (
-        <div className="main-container">
+        <div className="accordion-container">
             {
                 questions.map((obj, index) => (
                     <Question 

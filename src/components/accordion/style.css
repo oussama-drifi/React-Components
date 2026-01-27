@@ -1,5 +1,9 @@
-.main-container{
-    width: 100%;
+.accordion-container{
+    width: 500px;
+    background-color: rgb(252, 250, 255);
+    border: 1.5px solid #eee;
+    border-radius: 10px;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
 
@@ -7,13 +11,14 @@
         text-align: start;
         border-bottom: 1.5px solid #b4b4b4;
         overflow: hidden;
-        color: #b4b4b4;
+        color: rgb(128, 128, 128);
 
         &:last-child{
             border: none;
         }
 
         .question{
+            font-weight: 600;
             display: flex;
             justify-content: space-between;
             padding: 10px 4px;
@@ -21,7 +26,8 @@
             transition: all 0.2s ease;
         }
         .active{
-            color: rgb(253, 250, 255);
+            color: rgb(106, 6, 255);
+            padding: 10px 4px 0;
             span {
                 transform: rotate(180deg);
                 transition: transform 0.3s ease;

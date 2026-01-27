@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
 :root {
   --primary-color: #4f46e5;
@@ -23,9 +24,6 @@ button{
 }
 /* end global rules */
 
-body {
-  font-family: "poppins", sans-serif;
-}
 
 #root {
   max-width: 1280px;
