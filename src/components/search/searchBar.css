@@ -10,6 +10,7 @@ body {
     width: 300px; /* to be customized */
     position: relative;
     overflow: hidden;
+    background-color: blue;
 
     > label {
         position: absolute;
@@ -54,5 +55,6 @@ body {
         top: 5px;
         right: 5px;
         background-color: transparent;
+        background-color: red;
     }
 }
