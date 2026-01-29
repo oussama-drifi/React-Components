@@ -22,6 +22,14 @@ button{
   border: none;
   outline: none;
 }
+.components-wrapper {
+  width: 70%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 /* end global rules */
 
 

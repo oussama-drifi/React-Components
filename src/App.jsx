@@ -27,7 +27,7 @@ function App() {
     const options = ["Casablanca-Settat", "Rabat-Salé", "Tanger-Tétouan", "Laayoune-Boujdour", "Sous-Massa"];
 
     return (
-        <div>
+        <div className='components-wrapper'>
             <Accordion questions={questions}/>
             <PasswordStrengthChecker />
             <Search />

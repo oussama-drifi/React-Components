@@ -3,14 +3,14 @@ body {
 }
 
 .search-input {
-    background-color: rgb(254, 144, 144);
-    border: 1px solid #eee;
+    border: 1.5px solid #eee;
     border-radius: 7px;
     box-shadow: 1px 1px 40px rgba(51, 0, 90, 0.075);
     width: 300px; /* to be customized */
     position: relative;
     overflow: hidden;
-    background-color: blue;
+    background-color: rgb(252, 250, 255);
+
 
     > label {
         position: absolute;
@@ -30,6 +30,7 @@ body {
         width: 100%;
         padding: 10px 43px;
         font-size: 14px;
+        background-color: rgb(252, 250, 255);
     }
     & button{
         outline: none;
@@ -52,9 +53,9 @@ body {
         background-color: transparent;
     }
     & button:last-child{
-        top: 5px;
+        top: 50%;
+        transform: translateY(-50%);
         right: 5px;
         background-color: transparent;
-        background-color: red;
     }
 }
