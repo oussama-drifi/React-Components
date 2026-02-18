@@ -31,7 +31,7 @@ const PasswordStrengthChecker = () => {
     let progress = progresses[Object.values(constraints).filter(val => val).length];
     
     return (
-        <div className="container">
+        <div className="container component">
             <h4>check your password strength</h4>
             <div className="input-box">
                 <input onChange={handleChange} value={password} type="text" placeholder="enter your password here" id="password" />

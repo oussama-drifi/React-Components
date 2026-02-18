@@ -63,7 +63,7 @@ const SelectMenu = ({options}) => {
     }, [focusedIndex, isShown]);
 
     return (
-        <div className={`select-wrapper ${isOptionSelected ? "selected" : ""}`} ref={wrapperRef}>
+        <div className={`select-wrapper ${isOptionSelected ? "selected" : ""} component`} ref={wrapperRef}>
             <input 
                 type="hidden" 
                 value={selectedOption}

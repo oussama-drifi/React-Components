@@ -11,7 +11,7 @@ const Search = () => {
     const [input, setInput] = useState("");
 
     return (
-        <main style={styles}>
+        <main style={styles} className="component">
             <SearchBar input={input} setInput={setInput} optionsShown={optionsShown} setOptionsShown={setOptionsShown} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
             <SearchResults input={input} setInput={setInput} optionsShown={optionsShown} setOptionsShown={setOptionsShown} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         </main>

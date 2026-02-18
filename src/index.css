@@ -23,11 +23,12 @@ button{
   outline: none;
 }
 .components-wrapper {
-  width: 70%;
+  width: 100%;
   display: flex;
   gap: 2rem;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
   flex-wrap: wrap;
 }
 /* end global rules */
