@@ -1,12 +1,13 @@
 import '@fontsource/poppins';
 import "bootstrap-icons/font/bootstrap-icons.css";
-
+// components
 import Accordion from './components/accordion/accordion'
 import PasswordStrengthChecker from './components/passwordStrengthChecker/passwordStrengthChecker'
 import Search from './components/search/search'
 // import Carousel from './components/logoCarousel/carousel';
 import SelectMenu from './components/selectMenu/selectMenu';
 // import HouseCard from './components/Card/houseCard'
+// import dropZone from './components/DropZone/dropZone';
 
 function App() {
 
