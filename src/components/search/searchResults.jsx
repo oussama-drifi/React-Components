@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
-import {SearchItem, searchItemSkeleton } from './searchItem';
+import SearchItem from './searchItem';
 import { countries } from './countries'
 import './searchResults.css';
 
-const SearchResults = ({input, setInput, optionsShown, setOptionsShown, searchQuery, setSearchQuery}) => {
+const SearchResults = ({setInput, optionsShown, setOptionsShown, searchQuery}) => {
 
     const filteredCountries = useMemo(() => {
         return countries.filter(country => country.toLowerCase().startsWith(searchQuery.toLowerCase()))

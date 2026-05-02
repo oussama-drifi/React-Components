@@ -15,7 +15,7 @@ const PasswordStrengthChecker = () => {
 
     const handleChange = (e) => {
         const password = e.target.value;
-        setPassword(prev => password);
+        setPassword(password);
         // update constraints state
         setConstraints({
             length: password.length >= 8,

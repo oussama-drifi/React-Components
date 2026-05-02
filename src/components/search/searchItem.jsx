@@ -1,16 +1,5 @@
 import './searchItem.css'
 
-
-const searchItemSkeleton = () => {
-    return (
-        <div className="search-item-skeleton">
-            <div></div>
-        </div>
-    )
-}
-
-
-
 const SearchItem = ({name, onclick}) => {
     return (
         <div className="search-item" onClick={onclick}>
@@ -21,4 +10,4 @@ const SearchItem = ({name, onclick}) => {
     )
 }
 
-export {SearchItem, searchItemSkeleton}
+export default SearchItem

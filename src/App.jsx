@@ -4,37 +4,31 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Accordion from './components/accordion/accordion'
 import PasswordStrengthChecker from './components/passwordStrengthChecker/passwordStrengthChecker'
 import Search from './components/search/search'
-// import Carousel from './components/logoCarousel/carousel';
 import SelectMenu from './components/selectMenu/selectMenu';
-// import HouseCard from './components/Card/houseCard'
-// import dropZone from './components/DropZone/dropZone';
 
 function App() {
 
-    // for testing accordion component
     const questions = [
         {
-        question: "are you working on a some project ?",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem incidunt culpa sunt excepturi voluptatibus vitae quod quas reprehenderit porro minima eos odit quo tenetur cupiditate."
+            question: "Are you working on some project?",
+            answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem incidunt culpa sunt excepturi voluptatibus vitae quod quas reprehenderit porro minima eos odit quo tenetur cupiditate."
         }, {
-        question: "what programming languages do you like ?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima perferendis, iste molestias ea corrupti provident minus aut est dignissimos ad. Magnam architecto ullam aliquam quidem."
+            question: "What programming languages do you like?",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima perferendis, iste molestias ea corrupti provident minus aut est dignissimos ad. Magnam architecto ullam aliquam quidem."
         }, {
-        question: "for how long have you been coding ?",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi fugiat quos odio, eveniet nostrum harum illo, mollitia blanditiis dolores possimus magnam minus necessitatibus. Rerum et quia corporis nemo alias corrupti."
+            question: "For how long have you been coding?",
+            answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi fugiat quos odio, eveniet nostrum harum illo, mollitia blanditiis dolores possimus magnam minus necessitatibus. Rerum et quia corporis nemo alias corrupti."
         }
     ]
-    // for testing selection menu component
+
     const options = ["Casablanca-Settat", "Rabat-Salé", "Tanger-Tétouan", "Laayoune-Boujdour", "Sous-Massa"];
 
     return (
         <div className='components-wrapper'>
-            <Accordion questions={questions}/>
+            <Accordion questions={questions} />
             <PasswordStrengthChecker />
             <Search />
-            {/* <Carousel /> */}
-            <SelectMenu options={options}/>
-            {/* <HouseCard /> */}
+            <SelectMenu options={options} />
         </div>
     )
 }
