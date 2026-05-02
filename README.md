@@ -1,16 +1,83 @@
-# React + Vite
+# React Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of reusable UI components built with React 19 and Vite, deployed to GitHub Pages.
 
-Currently, two official plugins are available:
+**Live demo:** [oussamadrf.github.io/React-Components](https://oussamadrf.github.io/React-Components/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Component | Description |
+|---|---|
+| **Accordion** | Collapsible Q&A sections with animated chevron |
+| **Password Strength Checker** | Real-time validation against 5 constraints with a progress bar |
+| **Search** | Country search with 300ms debounce and filtered results |
+| **Select Menu** | Accessible dropdown with keyboard navigation (↑ ↓ Enter Esc) and ARIA roles |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- [React 19](https://react.dev)
+- [Vite](https://vite.dev) (rolldown-vite)
+- Plain CSS with native nesting
+- [Bootstrap Icons](https://icons.getbootstrap.com)
+- [Poppins](https://fonts.google.com/specimen/Poppins) via @fontsource
+
+---
+
+## Getting Started
+
+**Prerequisites:** Node.js 18+
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+### Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+This runs `vite build` then pushes the `dist/` folder to the `gh-pages` branch.
+
+---
+
+## Docker
+
+Build and run the app in a container (serves the production build via Nginx on port 80):
+
+```bash
+docker build -t react-components .
+docker run -p 8080:80 react-components
+```
+
+Then open [http://localhost:8080/React-Components/](http://localhost:8080/React-Components/)
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── accordion/
+│   ├── passwordStrengthChecker/
+│   ├── search/
+│   └── selectMenu/
+├── App.jsx
+├── main.jsx
+└── index.css
+```
